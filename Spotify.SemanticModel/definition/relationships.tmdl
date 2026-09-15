@@ -1,0 +1,4 @@
+relationship 2a3b4c5d-6e7f-4890-ab12-cd34ef567890
+	joinOnDateBehavior: datePartOnly
+	fromColumn: spotify_artist_streaming_2020_2025.release_date
+	toColumn: dCalendario.Date

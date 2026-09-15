@@ -1,0 +1,310 @@
+table spotify_artist_streaming_2020_2025
+	lineageTag: 5c70274d-59d1-4e1a-92e4-c37b07adcf18
+
+	column track_id
+		dataType: string
+		lineageTag: f39f08d5-d3a5-4d64-8cc7-4d1e66778ba3
+		summarizeBy: none
+		sourceColumn: track_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column track_name
+		dataType: string
+		lineageTag: 29df0dce-19e0-481a-b724-9f87e16e7fc3
+		summarizeBy: none
+		sourceColumn: track_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column artist_name
+		dataType: string
+		lineageTag: bbd18365-17ac-4ee0-8d0a-d90239e5ca78
+		summarizeBy: none
+		sourceColumn: artist_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column album_name
+		dataType: string
+		lineageTag: 42056ee2-14bd-4571-83ce-1cc55f6aec2b
+		summarizeBy: none
+		sourceColumn: album_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5f4d0587-9153-46df-a9f9-37925023aab5
+		summarizeBy: none
+		sourceColumn: release_date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column genre
+		dataType: string
+		lineageTag: 649db1f2-d455-4d94-bea8-b6600e67a786
+		summarizeBy: none
+		sourceColumn: genre
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration_ms
+		dataType: int64
+		formatString: 0
+		lineageTag: caac31b2-f395-4118-b82f-a2bd5e0b675e
+		summarizeBy: sum
+		sourceColumn: duration_ms
+
+		annotation SummarizationSetBy = Automatic
+
+	column popularity
+		dataType: int64
+		formatString: 0
+		lineageTag: 5578c1d3-003c-4448-86b4-ac979f143a5d
+		summarizeBy: sum
+		sourceColumn: popularity
+
+		annotation SummarizationSetBy = Automatic
+
+	column danceability
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 7919fe02-de9f-40e8-8217-1716c916e1a1
+		summarizeBy: sum
+		sourceColumn: danceability
+
+		annotation SummarizationSetBy = Automatic
+
+	column energy
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 12674987-eb84-4088-ade2-76526be2fdc7
+		summarizeBy: sum
+		sourceColumn: energy
+
+		annotation SummarizationSetBy = Automatic
+
+	column key
+		dataType: int64
+		formatString: 0
+		lineageTag: e673c10f-4a18-42bd-8e0d-d4313f11dc58
+		summarizeBy: sum
+		sourceColumn: key
+
+		annotation SummarizationSetBy = Automatic
+
+	column loudness
+		dataType: double
+		formatString: 0.00
+		lineageTag: 5046a294-3b69-49fb-8db0-c0110cc7764a
+		summarizeBy: sum
+		sourceColumn: loudness
+
+		annotation SummarizationSetBy = Automatic
+
+	column mode
+		dataType: int64
+		formatString: 0
+		lineageTag: 60d032b8-fddf-4556-9320-600e90565a33
+		summarizeBy: sum
+		sourceColumn: mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column instrumentalness
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 4beb4ebf-c2ea-49e3-9929-eeb6c2812afb
+		summarizeBy: sum
+		sourceColumn: instrumentalness
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo
+		dataType: double
+		formatString: 0.00
+		lineageTag: 11a62f83-1b70-4aa3-8d8c-fe2ab7c78cdb
+		summarizeBy: sum
+		sourceColumn: tempo
+
+		annotation SummarizationSetBy = Automatic
+
+	column stream_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e9f21c5-55dd-4f89-aa22-acaf41cea078
+		summarizeBy: sum
+		sourceColumn: stream_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 84f34bd6-bdeb-487e-aa44-342d6594fd93
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column explicit
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c834f638-4a58-4069-89b5-5e8ee45892c0
+		summarizeBy: none
+		sourceColumn: explicit
+
+		annotation SummarizationSetBy = Automatic
+
+	column label
+		dataType: string
+		lineageTag: e9520e1d-c0f4-4898-bc83-875cebeaf738
+		summarizeBy: none
+		sourceColumn: label
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ba2e5cb-2882-4b5d-91f8-d3f1da537e94
+		summarizeBy: sum
+		sourceColumn: release_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_month
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cd52dd2-b2cc-460f-9617-559a027ce22d
+		summarizeBy: sum
+		sourceColumn: release_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_day_of_week
+		dataType: string
+		lineageTag: 74419ded-4156-4124-9fd8-ac326000d30c
+		summarizeBy: none
+		sourceColumn: release_day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration_minutes
+		dataType: double
+		formatString: 0.00
+		lineageTag: ef456f91-2b04-4996-9b5e-8c67cd892070
+		summarizeBy: sum
+		sourceColumn: duration_minutes
+
+		annotation SummarizationSetBy = Automatic
+
+	column popularity_category
+		dataType: string
+		lineageTag: 18f20098-c86e-439a-b8aa-3516af1088fc
+		summarizeBy: none
+		sourceColumn: popularity_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column loudness_category
+		dataType: string
+		lineageTag: fa450d9d-84b0-4cbe-b8bf-910d621d46ff
+		summarizeBy: none
+		sourceColumn: loudness_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column key_name
+		dataType: string
+		lineageTag: 69cc6a22-cd37-4178-8a9d-b399175603b7
+		summarizeBy: none
+		sourceColumn: key_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column mode_name
+		dataType: string
+		lineageTag: b27eed23-1300-46f3-a830-813980626dc8
+		summarizeBy: none
+		sourceColumn: mode_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_explicit_bool
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: bd44bf59-9395-41dc-8d4f-cb4e943b4551
+		summarizeBy: none
+		sourceColumn: is_explicit_bool
+
+		annotation SummarizationSetBy = Automatic
+
+	column release_quarter
+		dataType: string
+		lineageTag: 8e74116c-066d-4452-9aab-0bf0ea825b75
+		summarizeBy: none
+		sourceColumn: release_quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_weekend_release
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3444b739-b057-499a-bf7b-42524a5a5d6a
+		summarizeBy: none
+		sourceColumn: is_weekend_release
+
+		annotation SummarizationSetBy = Automatic
+
+	column log_stream_count
+		dataType: double
+		formatString: 0.0000
+		lineageTag: 94785394-2946-4f74-93ae-c75ce70829db
+		summarizeBy: sum
+		sourceColumn: log_stream_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column upbeat_score
+		dataType: double
+		formatString: 0.0000
+		lineageTag: e3e9f049-1c44-4340-81ef-c6b3c76f400d
+		summarizeBy: sum
+		sourceColumn: upbeat_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column artist_track_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 2135f93c-0d7e-4592-9f77-50ac791b4b54
+		summarizeBy: sum
+		sourceColumn: artist_track_count
+
+		annotation SummarizationSetBy = Automatic
+
+	measure 'Total de Streams' = SUM('spotify_artist_streaming_2020_2025'[stream_count])
+		formatString: #,0
+
+	measure 'Média de Streams por Artista' = DIVIDE([Total de Streams], DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[artist_name]))
+		formatString: #,0.00
+
+	measure 'Ranking de Artistas' = RANKX(ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name]), [Total de Streams], , DESC, DENSE)
+		formatString: 0
+
+	partition spotify_artist_streaming_2020_2025 = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("F:\Backup_Gabriel\PowerBI estudos\Spotify Streaming\spotify_artist_streaming_2020_2025.csv"),[Delimiter=",", Columns=33, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"track_id", type text}, {"track_name", type text}, {"artist_name", type text}, {"album_name", type text}, {"release_date", type date}, {"genre", type text}, {"duration_ms", Int64.Type}, {"popularity", Int64.Type}, {"danceability", type number}, {"energy", type number}, {"key", Int64.Type}, {"loudness", type number}, {"mode", Int64.Type}, {"instrumentalness", type number}, {"tempo", type number}, {"stream_count", Int64.Type}, {"country", type text}, {"explicit", type logical}, {"label", type text}, {"release_year", Int64.Type}, {"release_month", Int64.Type}, {"release_day_of_week", type text}, {"duration_minutes", type number}, {"popularity_category", type text}, {"loudness_category", type text}, {"key_name", type text}, {"mode_name", type text}, {"is_explicit_bool", type logical}, {"release_quarter", type text}, {"is_weekend_release", type logical}, {"log_stream_count", type number}, {"upbeat_score", type number}, {"artist_track_count", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,22 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["spotify_artist_streaming_2020_2025"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table spotify_artist_streaming_2020_2025
+ref table dCalendario
+ref table DateTableTemplate_22798301-c843-42e4-827c-4c075f4f8053
+
+
+ref cultureInfo pt-BR
+

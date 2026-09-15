@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Spotify"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "349dd27f-b52b-4e41-ae4f-f0b7bc35a618"
+  }
+}
