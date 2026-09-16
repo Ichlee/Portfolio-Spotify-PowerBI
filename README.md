@@ -1,8 +1,6 @@
 # 🎵 Spotify Streaming Analytics — Power BI Dashboard
 
-<p align="center">
-  <img src="assets/dashboard-preview.png" alt="Preview do Dashboard Spotify" width="100%"/>
-</p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Power_BI-F2C94C?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI" />
