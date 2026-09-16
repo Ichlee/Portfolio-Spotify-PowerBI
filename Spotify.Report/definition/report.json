@@ -24,6 +24,26 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -35,6 +55,17 @@
           "name": "Fluent2-CY26SU08",
           "path": "BaseThemes/Fluent2-CY26SU08.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Template_Spotify1389625494373784.svg",
+          "path": "Template_Spotify1389625494373784.svg",
+          "type": "Image"
         }
       ]
     }

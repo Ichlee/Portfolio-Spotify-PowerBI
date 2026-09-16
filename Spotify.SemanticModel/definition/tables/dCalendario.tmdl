@@ -34,8 +34,8 @@ table dCalendario
 		dataType: string
 		lineageTag: 10000000-0000-0000-0000-000000000005
 		summarizeBy: none
-		sortByColumn: MesNumero
 		sourceColumn: [Mes]
+		sortByColumn: MesNumero
 
 		annotation SummarizationSetBy = Automatic
 
@@ -60,8 +60,8 @@ table dCalendario
 		dataType: string
 		lineageTag: 10000000-0000-0000-0000-000000000008
 		summarizeBy: none
-		sortByColumn: AnoMesNumero
 		sourceColumn: [AnoMes]
+		sortByColumn: AnoMesNumero
 
 		annotation SummarizationSetBy = Automatic
 
@@ -96,8 +96,8 @@ table dCalendario
 		dataType: string
 		lineageTag: 10000000-0000-0000-0000-000000000012
 		summarizeBy: none
-		sortByColumn: DiaSemanaNumero
 		sourceColumn: [DiaSemana]
+		sortByColumn: DiaSemanaNumero
 
 		annotation SummarizationSetBy = Automatic
 
@@ -120,7 +120,7 @@ table dCalendario
 
 	partition dCalendario = calculated
 		mode: import
-		source = ```
+		source =
 				VAR MenorData = MIN('spotify_artist_streaming_2020_2025'[release_date])
 				VAR MaiorData = MAX('spotify_artist_streaming_2020_2025'[release_date])
 				VAR DataInicial = DATE(YEAR(IF(ISBLANK(MenorData), DATE(2020,1,1), MenorData)), 1, 1)
@@ -141,4 +141,4 @@ table dCalendario
 				        "SemanaAno", WEEKNUM([Date], 2),
 				        "FimDeSemana", IF(WEEKDAY([Date], 2) >= 6, "Sim", "Não")
 				    )
-				```
+

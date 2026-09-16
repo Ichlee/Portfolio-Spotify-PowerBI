@@ -1,0 +1,693 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Filtro Aberto",
+  "name": "802781909760641a1c6e",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "de92cd9490ed00eb7754"
+    ],
+    "suppressData": true
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "eed4d6eed505e4b09358",
+    "sections": {
+      "eed4d6eed505e4b09358": {
+        "visualContainers": {
+          "d686b885c01595b375b9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "fdd9db5e8243b07ad041",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "c56bcad34a81359e431a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6e6edc21e57de7450c56",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Média de Streams por Artista"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Média de Streams por Artista"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e84001851451da2cc5ba": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9419c8c6d10d059e79db",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Crescimento % YoY"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Crescimento % YoY"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "5ec1391dc078c6993ced": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "82657135bc7040b68ee4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Outlier de Sucesso (Hit Ratio)"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Outlier de Sucesso (Hit Ratio)"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "cb879387e825b1474d08": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "c0430572860d33684eae",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3aa7324c03807709d049",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "75d9baa33d89048c1437",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Média Móvel de 3 Meses"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Date"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "8b9bed9805c8e4553a30": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "55edccfeb0b343430397",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "release_year"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b120434eca3860d0da0b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Streams por Ano de Lançamento"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Streams por Ano de Lançamento"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "release_year"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "f195084f1d69e5309650": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dd80e393505d0a1bd9b3",
+                  "type": "TopN",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "subquery",
+                        "Expression": {
+                          "Subquery": {
+                            "Query": {
+                              "Version": 2,
+                              "From": [
+                                {
+                                  "Name": "s",
+                                  "Entity": "spotify_artist_streaming_2020_2025",
+                                  "Type": 0
+                                }
+                              ],
+                              "Select": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "s"
+                                      }
+                                    },
+                                    "Property": "artist_name"
+                                  },
+                                  "Name": "field"
+                                }
+                              ],
+                              "OrderBy": [
+                                {
+                                  "Direction": 2,
+                                  "Expression": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "s"
+                                        }
+                                      },
+                                      "Property": "Total de Streams"
+                                    }
+                                  }
+                                }
+                              ],
+                              "Top": 5
+                            }
+                          }
+                        },
+                        "Type": 2
+                      },
+                      {
+                        "Name": "s",
+                        "Entity": "spotify_artist_streaming_2020_2025",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "s"
+                                    }
+                                  },
+                                  "Property": "artist_name"
+                                }
+                              }
+                            ],
+                            "Table": {
+                              "SourceRef": {
+                                "Source": "subquery"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "artist_name"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "86317f250060200682d8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "hundredPercentStackedBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "artist_name"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "1e48eba82263945183b7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "dbc60fec9b6cc254adaa",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "DiaSemana"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d666d6ec243a00956487",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "Total de Streams"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "DiaSemana"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "de92cd9490ed00eb7754": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ca7852655eb7c89890c2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7dbada52baed3d6379a4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "genre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c20a4f3067d0c2b064d5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "spotify_artist_streaming_2020_2025"
+                        }
+                      },
+                      "Property": "artist_name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dCalendario"
+                        }
+                      },
+                      "Property": "Ano"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "dCalendario.Ano"
+                      ],
+                      "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "dCalendario"
+                              }
+                            },
+                            "Property": "Ano"
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "spotify_artist_streaming_2020_2025.genre"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "spotify_artist_streaming_2020_2025.artist_name"
+                      ],
+                      "isCollapsed": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

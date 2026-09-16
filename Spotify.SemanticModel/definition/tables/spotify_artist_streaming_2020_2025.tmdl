@@ -1,6 +1,133 @@
 table spotify_artist_streaming_2020_2025
 	lineageTag: 5c70274d-59d1-4e1a-92e4-c37b07adcf18
 
+	measure 'Total de Streams' = SUM('spotify_artist_streaming_2020_2025'[stream_count])
+		formatString: #,0
+		lineageTag: 9c1a3551-07af-4816-898c-922d28ae424d
+
+	measure 'Média de Streams por Artista' = DIVIDE([Total de Streams], DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[artist_name]))
+		formatString: #,0.00
+		lineageTag: 0eb87d5b-39eb-43c0-a712-d1b625254179
+
+	measure 'Ranking de Artistas' = RANKX(ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name]), [Total de Streams], , DESC, DENSE)
+		formatString: 0
+		lineageTag: dcf26a79-030d-4c7d-bd8c-70c60361eb06
+
+	measure 'Média de Streams por Faixa' = AVERAGEX(VALUES('spotify_artist_streaming_2020_2025'[track_id]), CALCULATE([Total de Streams]))
+		formatString: #,0.00
+		displayFolder: 01 - Volume e engajamento
+		lineageTag: dabc8453-029d-439d-9b4e-21fce010a812
+
+	measure 'Total de Artistas Únicos' = DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[artist_name])
+		formatString: #,0
+		displayFolder: 01 - Volume e engajamento
+		lineageTag: bb9e97da-8b34-40f8-a0a5-7179fb3d28b3
+
+	measure 'Total de Faixas Únicas' = DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[track_id])
+		formatString: #,0
+		displayFolder: 01 - Volume e engajamento
+		lineageTag: f4f8df1f-7f11-478b-b746-1160969674d1
+
+	measure 'Streams do Artista Top 1' = MAXX(TOPN(1, ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name]), [Total de Streams], DESC), [Total de Streams])
+		formatString: #,0
+		displayFolder: 01 - Volume e engajamento
+		lineageTag: 39609fac-08df-447b-8807-e757ca63fa13
+
+	measure 'Streams no Ano Atual (YTD)' = CALCULATE([Total de Streams], DATESYTD('dCalendario'[Date]))
+		formatString: #,0
+		displayFolder: 02 - Evolução temporal
+		lineageTag: 0fce4e53-d594-4f2e-8ec6-63bcc48f9b7d
+
+	measure 'Streams Ano Anterior (LY)' = CALCULATE([Total de Streams], SAMEPERIODLASTYEAR('dCalendario'[Date]))
+		formatString: #,0
+		displayFolder: 02 - Evolução temporal
+		lineageTag: 82c70b26-57ff-40bf-aa97-dd40f2b636a7
+
+	measure 'Crescimento % YoY' = DIVIDE([Streams no Ano Atual (YTD)] - [Streams Ano Anterior (LY)], [Streams Ano Anterior (LY)])
+		formatString: 0.00%;-0.00%;-
+		displayFolder: 02 - Evolução temporal
+		lineageTag: 3e93ff74-66c8-4c36-bc36-f83092c7a2c1
+
+	measure 'Média Móvel de 3 Meses' =
+			CALCULATE(
+				AVERAGEX(VALUES('dCalendario'[AnoMesNumero]), [Total de Streams]),
+				DATESINPERIOD('dCalendario'[Date], MAX('dCalendario'[Date]), -3, MONTH)
+			)
+		formatString: #,0.00
+		displayFolder: 02 - Evolução temporal
+		lineageTag: 52624001-9836-4dbe-a3fa-94bc9f5e8b15
+
+	measure 'Músicas Lançadas no Período' = DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[track_id])
+		formatString: #,0
+		displayFolder: 03 - Lançamentos e catálogo
+		lineageTag: 1fd09e4f-553a-4017-af30-1651eb395f01
+
+	measure 'Streams por Ano de Lançamento' = [Total de Streams]
+		formatString: #,0
+		displayFolder: 03 - Lançamentos e catálogo
+		lineageTag: 8739f339-bdbb-4b4d-b8c1-077dddf80d49
+
+	measure 'Streams de Lançamentos Recentes' =
+			VAR MaiorAnoSelecionado = MAXX(ALLSELECTED('spotify_artist_streaming_2020_2025'[release_year]), 'spotify_artist_streaming_2020_2025'[release_year])
+			RETURN
+				CALCULATE(
+					[Total de Streams],
+					FILTER(
+						ALLSELECTED('spotify_artist_streaming_2020_2025'[release_year]),
+						'spotify_artist_streaming_2020_2025'[release_year] > MaiorAnoSelecionado - 3
+					)
+				)
+		formatString: #,0
+		displayFolder: 03 - Lançamentos e catálogo
+		lineageTag: 66622e86-99ea-4bd8-8e9b-290904c54c91
+
+	measure 'Streams de Catálogo e Nostalgia' =
+			VAR MaiorAnoSelecionado = MAXX(ALLSELECTED('spotify_artist_streaming_2020_2025'[release_year]), 'spotify_artist_streaming_2020_2025'[release_year])
+			RETURN
+				CALCULATE(
+					[Total de Streams],
+					FILTER(
+						ALLSELECTED('spotify_artist_streaming_2020_2025'[release_year]),
+						'spotify_artist_streaming_2020_2025'[release_year] <= MaiorAnoSelecionado - 3
+					)
+				)
+		formatString: #,0
+		displayFolder: 03 - Lançamentos e catálogo
+		lineageTag: 320c2aff-3b9f-4dde-a471-08c3813c0e7e
+
+	measure 'Outlier de Sucesso (Hit Ratio)' =
+			DIVIDE(
+				COUNTROWS(
+					FILTER(
+						VALUES('spotify_artist_streaming_2020_2025'[track_id]),
+						CALCULATE([Total de Streams]) > 1000000
+					)
+				),
+				DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[track_id])
+			)
+		formatString: 0.00%
+		displayFolder: 03 - Lançamentos e catálogo
+		lineageTag: 4a308b77-6208-4dc8-ba7f-e494dab9189e
+
+	measure 'Ranking do Artista' = RANKX(ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name]), CALCULATE([Total de Streams]), , DESC, DENSE)
+		formatString: 0
+		displayFolder: 04 - Rankings e distribuição
+		lineageTag: 5f1c6319-ca7c-44b2-a133-8199c7abb763
+
+	measure 'Ranking da Música' = RANKX(ALLSELECTED('spotify_artist_streaming_2020_2025'[track_name]), CALCULATE([Total de Streams]), , DESC, DENSE)
+		formatString: 0
+		displayFolder: 04 - Rankings e distribuição
+		lineageTag: 913342ec-e01f-4470-acbb-e35bfa0fada6
+
+	measure 'Share % do Top 10' =
+			VAR ArtistasSelecionados = ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name])
+			VAR Top10Artistas = TOPN(10, ArtistasSelecionados, [Total de Streams], DESC)
+			VAR StreamsTop10 = CALCULATE([Total de Streams], Top10Artistas)
+			RETURN DIVIDE(StreamsTop10, [Total de Streams])
+		formatString: 0.00%
+		displayFolder: 04 - Rankings e distribuição
+		lineageTag: cd496887-6df9-4435-a960-8698f59d8b00
+
 	column track_id
 		dataType: string
 		lineageTag: f39f08d5-d3a5-4d64-8cc7-4d1e66778ba3
@@ -286,15 +413,6 @@ table spotify_artist_streaming_2020_2025
 		sourceColumn: artist_track_count
 
 		annotation SummarizationSetBy = Automatic
-
-	measure 'Total de Streams' = SUM('spotify_artist_streaming_2020_2025'[stream_count])
-		formatString: #,0
-
-	measure 'Média de Streams por Artista' = DIVIDE([Total de Streams], DISTINCTCOUNT('spotify_artist_streaming_2020_2025'[artist_name]))
-		formatString: #,0.00
-
-	measure 'Ranking de Artistas' = RANKX(ALLSELECTED('spotify_artist_streaming_2020_2025'[artist_name]), [Total de Streams], , DESC, DENSE)
-		formatString: 0
 
 	partition spotify_artist_streaming_2020_2025 = m
 		mode: import
