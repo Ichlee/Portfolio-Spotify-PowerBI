@@ -46,7 +46,6 @@ O objetivo principal do projeto é oferecer visões estratégicas sobre o volume
 ### Página 1 — Visão Geral & Performance
 | Visão Principal | Painel de Filtros Retrátil |
 | :---: | :---: |
-| <img src="assets/pagina1-preview.png" width="450" alt="Página 1"/> | <img src="assets/filtros-preview.png" width="450" alt="Filtro"/> |
 
 </div>
 
